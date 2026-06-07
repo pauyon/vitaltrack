@@ -24,12 +24,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import DashboardIcon from '@mui/icons-material/SpaceDashboard';
 import BloodtypeIcon from '@mui/icons-material/Bloodtype';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useAuth } from '../context/AuthContext';
 import { useColorMode } from '../context/ColorModeContext';
+import logo from '../assets/logo.svg';
 
 const DRAWER_WIDTH = 248;
 const NAV_STORAGE_KEY = 'ht-nav-open';
@@ -79,18 +79,11 @@ export default function Layout() {
     <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       <Toolbar sx={{ gap: 1.5 }}>
         <Box
-          sx={{
-            width: 36,
-            height: 36,
-            borderRadius: 2,
-            display: 'grid',
-            placeItems: 'center',
-            color: '#fff',
-            backgroundImage: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-          }}
-        >
-          <MonitorHeartIcon fontSize="small" />
-        </Box>
+          component="img"
+          src={logo}
+          alt="VitalTrack"
+          sx={{ width: 36, height: 36 }}
+        />
         <Typography variant="h6" noWrap>
           VitalTrack
         </Typography>

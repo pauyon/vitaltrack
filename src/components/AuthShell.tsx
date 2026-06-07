@@ -1,6 +1,6 @@
 import { Box, Paper, Stack, Typography } from '@mui/material';
-import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import type { ReactNode } from 'react';
+import logo from '../assets/logo.svg';
 
 /** Centered card on a gradient backdrop, shared by Login and SignUp. */
 export default function AuthShell({
@@ -35,19 +35,11 @@ export default function AuthShell({
         <Stack spacing={3}>
           <Stack spacing={1} sx={{ alignItems: 'center', textAlign: 'center' }}>
             <Box
-              sx={{
-                width: 56,
-                height: 56,
-                borderRadius: 3,
-                display: 'grid',
-                placeItems: 'center',
-                color: '#fff',
-                backgroundImage:
-                  'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-              }}
-            >
-              <MonitorHeartIcon />
-            </Box>
+              component="img"
+              src={logo}
+              alt="VitalTrack"
+              sx={{ width: 56, height: 56 }}
+            />
             <Typography variant="h5">{title}</Typography>
             <Typography variant="body2" color="text.secondary">
               {subtitle}
